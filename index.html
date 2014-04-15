@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+
+        
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.2.css" />
+        <!-- <link rel="stylesheet" type="text/css" href="css/index.css" /> -->
+
+        <script src="js/jquery-2.0.3.min.js"></script>
+        <script src="js/jquery.mobile-1.4.2.js"></script>
+
+        <title>Locaminder</title>
+    </head>
+    <body>
+        <!-- <div class="app">
+            <h1>Apache Cordova</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device, Nikita!</p>
+                <p class="event received">Device is Ready, Nikita!</p>
+            </div>
+        </div> -->
+
+
+
+        <!-- Start of first page -->
+        <div data-role="page" id="distance-page">
+
+            <div data-role="header">
+                <h1>Please select alarm distance</h1>
+            </div><!-- /header -->
+
+            <div role="main" class="ui-content">
+                <a href="#confirmation-page" class="distance-btn ui-btn ui-corner-all" data-distance="10">10m</a>
+                <a href="#confirmation-page" class="distance-btn ui-btn ui-corner-all" data-distance="25">25m</a>
+                <a href="#confirmation-page" class="distance-btn ui-btn ui-corner-all" data-distance="50">50m</a>
+                <a href="#confirmation-page" class="distance-btn ui-btn ui-corner-all" data-distance="100">100m</a>
+            </div><!-- /content -->
+
+            <p id="lat"></p>
+            <p id="lon"></p>
+
+            <div data-role="footer" data-position="fixed">
+                <h4>Page Footer</h4>
+            </div><!-- /footer -->
+        </div><!-- /page -->
+
+        <!-- Start of second page -->
+        <div data-role="page" id="confirmation-page">
+
+            <div data-role="header">
+                <h1>Success!</h1>
+            </div><!-- /header -->
+
+            <div role="main" class="ui-content">
+                <p>You have set the reminder distance at:</p>
+                <p id="meters"></p>
+                <p>meters!</p>
+
+                <p>when you are farther than this from your current location, the alarm will ring</p>
+                <p>Do you want ot label what you don't want to forget?</p>
+
+                <input type="text" name="item" id="item" value="" >
+                <a id="savebutton" href="" data-role="button">Save</a>
+
+                <div id="item-display"></div>
+                <p><a href="#distance-page">Change alarm distance</a></p>
+                <p><a href="#distance-page">Cancel the alarm</a></p>
+            </div><!-- /content -->
+
+            <div data-role="footer" data-position="fixed">
+                <h4>Page Footer</h4>
+            </div><!-- /footer -->
+        </div><!-- /page -->
+
+
+
+
+
+
+
+
+
+
+<!--         
+        <script type="text/javascript" src="cordova.js"></script>
+         -->
+        <script src="js/phonegap-1.4.1.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            //app.initialize();
+        </script>
+
+        <!--
+            <script type="text/javascript">
+                StopGap();
+            </script>
+            -->
+
+    </body>
+</html>
